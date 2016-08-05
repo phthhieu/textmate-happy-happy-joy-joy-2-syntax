@@ -1,0 +1,347 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+atom-text-editor .gutter, :host .gutter {
+  background-color: @syntax-gutter-background-color;
+  color: @syntax-gutter-text-color;
+}
+
+atom-text-editor .gutter .line-number.cursor-line, :host .gutter .line-number.cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .gutter .line-number.cursor-line-no-selection, :host .gutter .line-number.cursor-line-no-selection {
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .wrap-guide, :host .wrap-guide {
+  color: @syntax-wrap-guide-color;
+}
+
+atom-text-editor .indent-guide, :host .indent-guide {
+  color: @syntax-indent-guide-color;
+}
+
+atom-text-editor .invisible-character, :host .invisible-character {
+  color: @syntax-invisible-character-color;
+}
+
+atom-text-editor .search-results .marker .region, :host .search-results .marker .region {
+  background-color: transparent;
+  border: @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region, :host .search-results .marker.current-result .region {
+  border: @syntax-result-marker-color-selected;
+}
+
+atom-text-editor.is-focused .cursor, :host(.is-focused) .cursor {
+  border-color: @syntax-cursor-color;
+}
+
+atom-text-editor.is-focused .selection .region, :host(.is-focused) .selection .region {
+  background-color: @syntax-selection-color;
+}
+
+atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-editor.is-focused .line.cursor-line, :host(.is-focused) .line-number.cursor-line-no-selection, :host(.is-focused) .line.cursor-line {
+  background-color: rgba(242, 248, 254, 0.45);
+}
+
+.comment {
+  font-style: italic;
+  color: #858B7C;
+}
+
+.comment.block {
+  font-style: italic;
+  color: #858B7C;
+  background-color: rgba(157, 168, 147, 0.21);
+}
+
+.string {
+  font-weight: bold;
+  font-style: italic;
+  color: #901A12;
+  background-color: #DFC8C7;
+}
+
+.string .constant {
+  font-weight: bold;
+  font-style: italic;
+  color: #E12B1F;
+  background-color: #DFC8C7;
+}
+
+.string .source {
+  font-weight: bold;
+  font-style: italic;
+  color: #A70000;
+  background-color: #DFC8C7;
+}
+
+.string .variable, .variable.parameter.misc.css {
+  font-weight: bold;
+  font-style: italic;
+  color: #C8297C;
+  background-color: #DFC8C7;
+}
+
+.string.interpolated, .string.interpolation {
+  font-weight: bold;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.98);
+  background-color: #FFFF55;
+}
+
+.string.regexp {
+  font-weight: bold;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #CC3E37;
+}
+
+.keyword.control {
+  font-weight: bold;
+  color: #5A7057;
+}
+
+.keyword.control.import {
+  color: #65961E;
+}
+
+.keyword.operator {
+  color: #2060A0;
+}
+
+.keyword.operator.setter {
+  font-weight: bold;
+  color: #761B48;
+}
+
+.keyword.other.special-method {
+  font-weight: bold;
+  color: #2D669A;
+}
+
+.keyword.other.unit {
+  color: #3C8F93;
+}
+
+.storage.type, .support.type {
+  color: #A08000;
+}
+
+.storage.type.method {
+  color: #70727E;
+}
+
+.storage.type.user-defined {
+  color: #800080;
+}
+
+.storage.modifier {
+  text-decoration: underline;
+  color: #6EAC34;
+}
+
+.constant, .support.constant {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #E12B1F;
+}
+
+.constant.character {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #AE81FF;
+}
+
+.constant.character.entity {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #2A9A66;
+}
+
+.constant.character.escape {
+  font-weight: bold;
+  color: #000000;
+  background-color: rgba(251, 0, 22, 0.5);
+}
+
+.constant.language {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #376FC3;
+}
+
+.constant.numeric {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #4F9B00;
+}
+
+.variable, .support.variable {
+  font-weight: bold;
+  color: #54AC3B;
+}
+
+.variable.other {
+  font-weight: bold;
+  color: #9D3266;
+}
+
+.support.function {
+  font-weight: bold;
+}
+
+.support.function.properties {
+  font-weight: bold;
+  font-style: italic;
+  color: #8D0004;
+}
+
+.class, .support.class {
+  font-weight: bold;
+  color: #2970CA;
+}
+
+.support.class.exception {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #990000;
+}
+
+.markup.bold {
+  font-weight: bold;
+  color: #080808;
+}
+
+.markup.deleted {
+  color: #E34733;
+}
+
+.markup.heading {
+  font-weight: bold;
+  color: #4266A0;
+}
+
+.markup.italic {
+  font-style: italic;
+}
+
+.markup.link, .link, .meta.link.inline {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #234A97;
+}
+
+.markup.list {
+  color: #B90690;
+}
+
+.markup.quote {
+  font-style: italic;
+  color: #0B6125;
+}
+
+.markup.raw {
+  color: #234A97;
+  background-color: #FFFFFF;
+}
+
+.markup.underline {
+  text-decoration: underline;
+  color: #080808;
+}
+
+.declaration.tag {
+  color: #4266A0;
+}
+
+.entity.name.class {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #4F1900;
+}
+
+.entity.name.class.variant {
+  text-decoration: underline;
+  color: #C08060;
+}
+
+.entity.name.function {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #5C3566;
+}
+
+.entity.name.tag {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #519A58;
+}
+
+.entity.name.type.class {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #589C24;
+}
+
+.entity.name.type.class.type {
+  text-decoration: underline;
+  color: #8000C0;
+}
+
+.entity.other.attribute-name {
+  text-decoration: underline;
+  color: #D2261B;
+}
+
+.entity.other.inherited-class {
+  text-decoration: underline;
+  color: #84A135;
+}
+
+.invalid {
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #990000;
+}
+
+.invalid.bad-comma.css {
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
+
+.invalid.deprecated {
+  font-weight: bold;
+  color: #5B62B5;
+  background-color: #AE81FF;
+}
+
+.invalid.deprecated.trailing-whitespace {
+  background-color: #FFD0D0;
+}
+
+.invalid.illegal {
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #562D56;
+}
+
+.punctuation.definition.entity {
+  font-weight: bold;
+  color: #2A9A66;
+}
+
+.punctuation.delimiter.method {
+  font-weight: bold;
+  color: #761B48;
+}
